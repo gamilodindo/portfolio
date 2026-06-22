@@ -215,4 +215,12 @@
   justify-content: center;
   align-items: center;
 }
+
+  .carousel-track {
+    gap: 15px;
+  }
+
+  .card {
+    min-width: calc(50% - 10px); /* 👈 THIS makes 2 cards visible */
+  }
 }

@@ -46,7 +46,5 @@ footer {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  body {
-  margin: 0 15px;
-}
+
 }

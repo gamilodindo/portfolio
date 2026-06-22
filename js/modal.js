@@ -9,16 +9,28 @@ function moveCarousel(direction) {
   const cards = track.children;
 
   const cardWidth = cards[0].offsetWidth + 20;
-  const visibleCards = 3;
-
-  const maxIndex = Math.max(0, cards.length - visibleCards);
 
   carouselIndex += direction;
 
-  if (carouselIndex < 0) carouselIndex = 0;
-  if (carouselIndex > maxIndex) carouselIndex = maxIndex;
-
+  track.style.transition = "transform 0.5s ease";
   track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+
+  const total = cards.length;
+
+  // reset without animation when reaching cloned edges
+  setTimeout(() => {
+    if (carouselIndex <= 2) {
+      track.style.transition = "none";
+      carouselIndex = total - 6;
+      track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+    }
+
+    if (carouselIndex >= total - 3) {
+      track.style.transition = "none";
+      carouselIndex = 3;
+      track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+    }
+  }, 500);
 }
 
 /* =========================
@@ -106,4 +118,28 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeGallery();
   if (e.key === "ArrowRight") changeImage(1);
   if (e.key === "ArrowLeft") changeImage(-1);
+});
+
+
+window.addEventListener("load", () => {
+  const track = document.getElementById("carouselTrack");
+  const cards = Array.from(track.children);
+
+  const visible = 3;
+
+  // clone last 3 → prepend
+  for (let i = cards.length - visible; i < cards.length; i++) {
+    const clone = cards[i].cloneNode(true);
+    track.insertBefore(clone, track.firstChild);
+  }
+
+  // clone first 3 → append
+  for (let i = 0; i < visible; i++) {
+    const clone = cards[i].cloneNode(true);
+    track.appendChild(clone);
+  }
+
+  carouselIndex = visible;
+
+  updateCarousel(true);
 });

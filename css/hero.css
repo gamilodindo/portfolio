@@ -34,3 +34,11 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+h1,p {
+  margin : 0 10px;
+}
+}
