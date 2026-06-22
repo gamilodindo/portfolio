@@ -1,0 +1,47 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .toggle {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background: #0b1220;
+  color: white;
+}
+
+.dark-mode .section {
+  background: #111827;
+}
+
+.dark-mode .box,
+.dark-mode .timeline-item .content {
+  background: #1f2937;
+  color: white;
+}

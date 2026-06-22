@@ -1,0 +1,28 @@
+.summary-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  line-height: 1.7;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.summary-card p {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.summary-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.summary-tags span {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}

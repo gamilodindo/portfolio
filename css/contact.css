@@ -1,0 +1,36 @@
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: #0f172a;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-card h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.contact-card p,
+.contact-card li {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.contact-card ul {
+  padding-left: 18px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
