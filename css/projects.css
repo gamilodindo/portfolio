@@ -91,8 +91,8 @@
   background: rgba(255,255,255,0.2);
 }
 
-.left { left: 20px; }
-.right { right: 20px; }
+.left { left: -100px; }
+.right { right: -100px; }
 
 /* THUMBNAILS (NETFLIX STYLE) */
 .thumbnails {
@@ -130,7 +130,7 @@
 }
 
 .viewer {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,4 +141,82 @@
   max-width: 100%;
   max-height: 70vh;
   border-radius: 12px;
+}
+
+/* SECTION */
+#projects {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* WRAPPER */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 50px;
+}
+
+/* TRACK */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* CARD */
+.card {
+  min-width: 300px;
+  background: #111827;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* BUTTONS */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.left { left: -100px; }
+.right { right: -100px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card {
+    min-width: 250px;
+  }
+
+ .left { left: 20px; }
+ .right { right: 20px; }
+
+ .viewer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }

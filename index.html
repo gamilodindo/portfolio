@@ -127,9 +127,15 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="fade">
-        <h2>Projects</h2>
+        <center><h2 style="font-size: 32px;">Projects</h2></center>
 
-        <div class="projects">
+        <div class="carousel-wrapper">
+        
+            <button class="carousel-btn left" onclick="moveCarousel(-1)">
+                &#10094;
+            </button>
+        
+            <div class="carousel-track" id="carouselTrack">
             <div class="card" onclick="openGallery(this)" data-images="./images/BarrioMart/bm-1.jpg,
                          ./images/BarrioMart/bm-2.jpg,
                          ./images/BarrioMart/bm-3.jpg,
@@ -244,7 +250,7 @@
                          ./images/BitBeat/b-14.jpg,
                          ./images/BitBeat/b-15.jpg
                          ">
-                <img src="./images/BitBeat/b-1.jpg" alt="BitBeat">
+                <img src="./images/BitBeat/b-1.1.jpg" alt="BitBeat">
                 <h3>BitBeat</h3>
             </div>
 
@@ -261,26 +267,32 @@
                          ./images/Geonection/g-11.jpg,
                          ./images/Geonection/g-12.jpg
                          ">
-                <img src="./images/Geonection/g-1.jpg" alt="BitBeat">
+                <img src="./images/Geonection/g-1.1.jpg" alt="BitBeat">
                 <h3>Geonection</h3>
             </div>
 
             <div class="card" onclick="openGallery(this)" data-media="./images/HelmX/h-1.mp4">
-                <img src="./images/HelmX/h-2.jpeg" alt="BitBeat">
+                <img src="./images/HelmX/h-1.1.jpg" alt="BitBeat">
                 <h3>HelmX</h3>
             </div>
+
+
+
         </div>
+                    <button class="carousel-btn right" onclick="moveCarousel(1)">
+                &#10095;
+            </button>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience" class="fade">
-        <h2>Experience</h2>
+         <center><h2 style="font-size: 32px;">Experience</h2></center>
 
         <div class="timeline">
             <div class="item">
                 <div class="dot"></div>
                 <h3>.Net Developer</h3>
-                <h4>Asticom Group of Companies / Acquiro | Taguig, Metro Manila, PH </h4>
+                <h5>Asticom Group of Companies / Acquiro | Taguig, Metro Manila, PH </h5>
                 <!-- <p>
                         Responsible for developing and maintaining enterprise accounting and ticketing systems, this role utilized ASP.NET Core, Entity Framework, SQL Server, and Azure DevOps to deliver secure and scalable solutions. Key contributions included designing RESTful APIs for seamless integration, optimizing performance through code refactoring and SQL improvements, and ensuring system stability. Business‑critical features were delivered within Agile sprints, while collaboration with QA, analysts, and stakeholders supported smooth deployments. Additional responsibilities involved mentoring junior developers and promoting best practices to enhance team productivity. Technical expertise applied included C#, Git, JWT Authentication, OpenID Connect, Dependency Injection, Microsoft Syntex, and PowerApps.
                 </p> -->
@@ -399,6 +411,10 @@
         <div id="thumbnails" class="thumbnails"></div>
 
     </div>
+
+        <footer>
+            <p>© 2026 Dindo Gamilo | Senior .NET Developer</p>
+        </footer>
 
     <script src="./js/site.js"></script>
     <script src="./js/modal.js"></script>
