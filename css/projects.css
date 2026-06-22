@@ -91,9 +91,6 @@
   background: rgba(255,255,255,0.2);
 }
 
-.left { left: -100px; }
-.right { right: -100px; }
-
 /* THUMBNAILS (NETFLIX STYLE) */
 .thumbnails {
   display: flex;
@@ -201,8 +198,9 @@
   background: rgba(255,255,255,0.2);
 }
 
-.left { left: -100px; }
-.right { right: -100px; }
+ .left { left: 20px; }
+ .right { right: 20px; }
+
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -210,8 +208,6 @@
     min-width: 250px;
   }
 
- .left { left: 20px; }
- .right { right: 20px; }
 
  .viewer {
   width: 80%;
